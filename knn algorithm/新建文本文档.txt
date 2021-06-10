@@ -1,0 +1,34 @@
+discrete number离散值 real number实数值
+
+supervised vs unsupervised
+Unlike supervised learning that tries to learn a function that will allow us to make predictions given some new unlabeled data, 
+unsupervised learning tries to learn the basic structure of the data to give us more insight into the data.
+
+knn similarity-distance closeness proximity
+
+knn-algorithm implementation
+
+Load the data
+1、Initialize K to your chosen number of neighbors
+2、For each example in the data
+3.1 Calculate the distance between the query example and the current example from the data.
+3.2 Add the distance and the index of the example to an ordered collection
+4. Sort the ordered collection of distances and indices from smallest to largest (in ascending order) by the distances
+5. Pick the first K entries from the sorted collection
+6. Get the labels of the selected K entries
+7. If regression, return the mean of the K labels
+8. If classification, return the mode of the K labelsChoosing the right value for K
+
+
+To select the K that’s right for your data, 
+we run the KNN algorithm several times with different values of K and choose the K 
+that reduces the number of errors we encounter while maintaining the algorithm’s ability to accurately make predictions 
+when it’s given data it hasn’t seen before.
+
+
+KNN’s main disadvantage of becoming significantly slower as the volume of data increases 
+makes it an impractical choice in environments where predictions need to be made rapidly. 
+Moreover, there are faster algorithms that can produce more accurate classification and regression results.
+However, provided you have sufficient computing resources to speedily handle the data you are using to make predictions, 
+KNN can still be useful in solving problems that have solutions that depend on identifying similar objects.
+ An example of this is using the KNN algorithm in recommender systems, an application of KNN-search.
